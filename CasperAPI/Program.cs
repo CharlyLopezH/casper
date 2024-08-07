@@ -15,6 +15,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(opciones =>
 opciones.UseSqlServer("name=DefaultConnection"));
 
 //Importante respetar esta posición
+builder.Services.AddOutputCache();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

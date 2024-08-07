@@ -136,3 +136,4 @@ C:\Contra\sistemas\Desarrollos\casper\CasperAPI\bin\Debug\net8.0\Swashbuckle.Asp
 C:\Contra\sistemas\Desarrollos\casper\CasperAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Contra\sistemas\Desarrollos\casper\CasperAPI\obj\Debug\net8.0\CasperAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Contra\sistemas\Desarrollos\casper\CasperAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Contra\sistemas\Desarrollos\casper\CasperAPI\obj\Debug\net8.0\CasperAPI.sourcelink.json

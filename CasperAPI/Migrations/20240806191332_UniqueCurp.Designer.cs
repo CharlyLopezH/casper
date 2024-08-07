@@ -4,6 +4,7 @@ using CasperAPI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasperAPI.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240806191332_UniqueCurp")]
+    partial class UniqueCurp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,16 +35,14 @@ namespace CasperAPI.Migrations
 
                     b.Property<string>("CURP")
                         .IsRequired()
-                        .HasMaxLength(19)
-                        .HasColumnType("varchar(19)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Codigo")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("varchar(30)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateOnly>("FechaDeNacimiento")
                         .HasColumnType("date");

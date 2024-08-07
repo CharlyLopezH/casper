@@ -24,5 +24,20 @@ namespace CasperAPI.Repositorios
             return await context.Empleados.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
 
+        public async Task<bool> Existe(int id)
+        {
+            return await context.Empleados.AnyAsync(x => x.Id == id);
+        }
+
+        public async Task Actualizar(Empleado empleado)
+        {
+            context.Update(empleado);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task Borrar(int id)
+        {
+            await context.Empleados.Where(x=>x.Id == id).ExecuteDeleteAsync();
+        }
     }
 }

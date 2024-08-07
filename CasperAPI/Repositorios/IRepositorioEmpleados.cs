@@ -6,7 +6,11 @@ namespace CasperAPI.Repositorios
     {
         Task<int> Crear(Empleado empleado);
         Task<List<Empleado>> ObtenerTodos();
-
         Task<Empleado?> ObtenerPorId(int id);        
+        Task Actualizar(Empleado empleado);
+        Task Borrar(int id);
+        Task<bool> Existe(int id);
+        
+
     }
 }
